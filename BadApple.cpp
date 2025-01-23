@@ -20,6 +20,7 @@ public:
             bIsRunning = true;
             while (frame && bIsRunning)
             {
+                engine->ClientCmd("clear"); //always clear the console before a new frame
                 Msg("%s\n",frame); //I used monospaced font for prining, otherwise the output'll be broken (because spaces symbol are less space than "#" symbol)
                 Sleep(33);
                 frame = strtok(NULL,"newframe");
